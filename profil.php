@@ -70,7 +70,7 @@
                 echo "<h4 class='error'>$error</h4>";
             }
             if (isset($success) && $success) {
-                echo "<h4 class='success'>Modifications enregistrées avec  succès !</h4>";
+                echo "<h4 class='success'>Modifications enregistrées avec succès !</h4>";
             }
             ?>
             <form method="post">

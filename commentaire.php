@@ -8,16 +8,19 @@
 
     extract($_SESSION["user"]);
     extract($_POST);
+    print_r($_SESSION["user"]);
+    var_dump($_SESSION["user"]);
 
     $db = new mysqli("localhost", "root", "", "livreor");
 
     if (isset($commentaire)) {
-        $request = "INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES (?, ?, NOW())";
+        $request = "INSERT INTO commentaires (commentaires, id_utilisateur, date) VALUES (?, ?, NOW())";
         $stmt = $db->prepare($request);
         $stmt->bind_param("ss", $commentaire, $id);
         $stmt->execute();
-
-        header("Refresh: 0; URL=livre-or/livre-or.php");
+        print_r($_SESSION["user"]);
+        var_dump($_SESSION["user"]);
+        header("Refresh: 0; URL=livre-or.php");
         die;
     }
 ?>
@@ -28,7 +31,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Livre d'or</title>
 </head>

@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fbfbfb;
+    background: #b1a3ff;
 }
 
 * {
@@ -11,15 +11,15 @@ html, body {
 }
 
 header {
-    background: #d1c40c;
-    color: rgb(0, 0, 0);
+    background: #0f0f30;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 1.5em 0;
 }
 
 header a {
     text-decoration: none;
-    color: rgb(86, 70, 92);
+    color: rgb(255, 255, 255);
 }
 
 main {
@@ -52,7 +52,7 @@ h2 {
     transition: background 0.125s ease-out;
 }
 .buttons a:hover {
-    background: #c5ce41;
+    background: #9a8fff;
 }
 
 .columns {
@@ -62,8 +62,8 @@ h2 {
 .column {
     display: flex;
     flex-direction: column;
-    flex: 1 0 0;
-    margin: 0.5em;
+    flex: 4 0 0;
+    margin: 2.5em;
 }
 
 h2 {
@@ -81,7 +81,7 @@ table {
     width: 100%;
 }
 th, td {
-    border: 1px solid black;
+    border: 6px solid black;
     padding: 0.25em;
 }
 td:first-child {

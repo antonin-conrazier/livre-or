@@ -16,6 +16,8 @@
 
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Livre d'or</title>
 </head>
@@ -33,7 +35,7 @@
                     <span class="date">Posté le <?= $commentaire["date"] ?> par </span>
                     <span class="username"><?= getUsername($db, $commentaire["id_utilisateur"]) ?></span>
                 </div>
-                <div class="content"><?= $commentaire["commentaire"] ?></div>
+                <div class="content"><?= $commentaire["commentaires"] ?></div>
             </div>
             <?php
         }

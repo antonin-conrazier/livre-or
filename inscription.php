@@ -2,7 +2,7 @@
     session_start();
 
       if (isset($_SESSION["user"])) {
-        header("Refresh: 0; URL=/");
+        header("Refresh: 0");
         die;
     }
 
@@ -43,7 +43,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="style.css">
         <title>Inscription</title>
     </head>
@@ -51,7 +50,7 @@
     <body>
         <header>
             <h1>Livre d'or</h1>
-            <a href="/">Retour</a>
+            <a href="/index.php">Retour</a>
         </header>
         <main id="inscription">
             <h2>Inscription</h2>
@@ -59,7 +58,7 @@
             if (isset($error)) {
                 echo "<h4 class='error'>$error</h4>";
             }
-            if (isset($success) && $success) {
+            if (isset($success) && $success)    {
                 echo "<h4 class='success'>Compte créé avec succès ! Vous pouvez dorénavant vous connecter...<br>Vous allez être redirigé dans 5 secondes...</h4>";
                 header("Refresh: 5; URL=/connexion.php");
             } else { ?>
